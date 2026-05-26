@@ -7,14 +7,15 @@ import java.util.Scanner;
 
 public class FileIO {
 
-    File file= new File ("Data/opgave_3_sales.csv");
+    //File file= new File ("Data/opgave_3_sales.csv");
     Scanner fileReader;
     String header;
 
 
 
 
-    public ArrayList<String> dataString(){
+    public ArrayList<String> dataString(String url){
+        File file = new File(url);
         ArrayList <String> data= new ArrayList<>();
         String line;
 

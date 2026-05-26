@@ -1,7 +1,6 @@
 package Opgave_5;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,36 +8,45 @@ import java.util.Scanner;
 
 public class FileIO {
 
-    Scanner fileReader;
-    FileWriter fw;
-    File messagesFile = new File("Data/opgave_5_messages.csv");
+   static Scanner fileReader;
+   static FileWriter fw;
 
-    public ArrayList<String> data (){
+
+    public static ArrayList<String> data (String url){
+        File file = new File(url);
         ArrayList <String> data=new ArrayList<>();
         try{
-        fileReader=new Scanner(messagesFile);
+        fileReader=new Scanner(file);
         String line;
 
         while(fileReader.hasNextLine()){
             line=fileReader.nextLine();
             data.add(line);
         }
-        }catch (FileNotFoundException f){
+        }catch (Exception f){
             System.out.println("file not found");
         }
         return data;
     }
 
 
-    public void saveMessage(String message, ArrayList<String>messages){
+    public static void save(String url, ArrayList<String>messages) {
         try{
-        fw = new FileWriter(messagesFile);
+        fw = new FileWriter(url);
             for(String s:messages){
                 fw.write(s+ "\n");
             }
         }catch (IOException i){
             System.out.println("file not found");
+        } finally
+        {try{fw.close();
+        }catch (Exception e){
+            e.getMessage();
         }
+
+        }
+
+
 
 
         // message skal ind i bunden. gem den først i arraylisten

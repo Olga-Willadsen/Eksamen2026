@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 public class Controller {
 
     View v = new View();
-    SalesReader sr = new SalesReader();
+    SalesReader sr = new SalesReader("Data/opgave_3_sales.csv");
 
 
 
