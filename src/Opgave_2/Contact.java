@@ -2,8 +2,8 @@ package Opgave_2;
 
 public class Contact {
 
-    String name;
-    String phonenumber;
+    private String name;
+    private String phonenumber;
 
     Contact(String name, String phoneNumber){
         this.name=name;
@@ -22,7 +22,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact{" +
+        return  "Contact{" +
                 "name='" + name + '\'' +
                 ", phonenumber='" + phonenumber + '\'' +
                 '}';

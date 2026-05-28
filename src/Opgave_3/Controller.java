@@ -4,8 +4,8 @@ import java.util.InputMismatchException;
 
 public class Controller {
 
-    View v = new View();
-    SalesReader sr = new SalesReader("Data/opgave_3_sales.csv");
+    private View v = new View();
+    private SalesReader sr = new SalesReader("Data/opgave_3_sales.csv");
 
 
 

@@ -5,9 +5,9 @@ import java.util.*;
 
 public class SalesReader {
 
-    FileIO io = new FileIO();
-    String url;
-    TreeMap <Integer, Integer> monthlySales;
+
+    private String url;
+    private TreeMap <Integer, Integer> monthlySales;
 
     SalesReader(String url){
         this.url=url;
@@ -61,7 +61,7 @@ public class SalesReader {
     public TreeMap<Integer, Integer> monthlySales(){
 
         monthlySales= new TreeMap<>();
-        ArrayList <String> data=io.dataString(this.url);
+        ArrayList <String> data=FileIO.dataString(this.url);
 
         for (String s:data) {
             String [] line = s.split(",");

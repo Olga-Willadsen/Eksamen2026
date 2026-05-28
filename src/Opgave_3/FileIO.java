@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class FileIO {
 
     //File file= new File ("Data/opgave_3_sales.csv");
-    Scanner fileReader;
-    String header;
+    static  Scanner fileReader;
+    static String header;
 
 
 
 
-    public ArrayList<String> dataString(String url){
+    public static ArrayList<String> dataString(String url){
         File file = new File(url);
         ArrayList <String> data= new ArrayList<>();
         String line;
@@ -27,7 +27,8 @@ public class FileIO {
                 data.add(line);
             }
         }catch (IOException i){
-            System.out.println("stien er forkert");
+            System.out.println("noget gik galt");
+            System.out.println(i.getMessage());
         }
         return data;
     }

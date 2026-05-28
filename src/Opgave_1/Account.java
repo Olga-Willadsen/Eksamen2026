@@ -4,9 +4,9 @@ import java.text.DecimalFormat;
 
 public class Account {
 
-    int id;
-    String owner;
-    double balance;
+    private int id;
+    private String owner;
+    private double balance;
 
     Account (int id, String owner,double balance){
         this.id=id;
@@ -30,12 +30,12 @@ public class Account {
         balance=amount;
     }
 
-    public void modifyBalance(double amount){
-        this.balance+=amount;
-    }
-
     public double getBalance(){
         return balance;
+    }
+
+    public String getOwner(){
+        return owner;
     }
 
 }

@@ -38,7 +38,9 @@ public static void saveData (ArrayList<String> data, String url){
     try {
         fw = new FileWriter(url);
         for (String a : data) {
-            fw.write(a+ "\n");
+            if(a.equals(data.getLast()))
+            {fw.write(a);}
+            else {fw.write(a+ "\n");}
         }
     }catch(IOException io){
         System.out.println(io.getCause());

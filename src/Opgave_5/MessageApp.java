@@ -6,8 +6,8 @@ import static Opgave_5.TextUI.promptText;
 
 public class MessageApp {
 
-    String url;
-    ArrayList <String> messages;
+    private String url;
+    private ArrayList <String> messages;
 
     MessageApp (String url){
         this.url=url;

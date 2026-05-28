@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class TextUI {
 
-    Scanner scan = new Scanner(System.in);
+    static Scanner scan = new Scanner(System.in);
 
 
 
-    public int promptInt(String message){
+    public static int promptInt(String message){
         int response=0;
         System.out.println(message);
         try {

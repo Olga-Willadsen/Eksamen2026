@@ -24,7 +24,7 @@ public class FileIO {
             data.add(line);
         }
         }catch (Exception f){
-            System.out.println("file not found");
+            System.out.println("something went wrong");
         }
         return data;
     }
@@ -34,27 +34,22 @@ public class FileIO {
         try{
         fw = new FileWriter(url);
             for(String s:messages){
+                if(s.equals(messages.getLast())){
+                    fw.write(s);
+                } else {
                 fw.write(s+ "\n");
             }
+            }
+            System.out.println("save successful");
         }catch (IOException i){
-            System.out.println("file not found");
-        } finally
-        {try{fw.close();
+            System.out.println("Something went wrong");
+        } finally {
+            try{fw.close();
         }catch (Exception e){
             e.getMessage();
         }
 
         }
-
-
-
-
-        // message skal ind i bunden. gem den først i arraylisten
-        // genmløb array og gem igen?
-        // writer writer
-
-
-
 
     }
 

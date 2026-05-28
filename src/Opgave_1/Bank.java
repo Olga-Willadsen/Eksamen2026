@@ -7,9 +7,8 @@ import java.util.TreeMap;
 
 public class Bank {
 
-    String url;
-    TreeMap <Integer, Account> allAccounts;
-
+    private String url;
+    private TreeMap <Integer, Account> allAccounts;
 
 
     Bank(String url){
@@ -79,7 +78,7 @@ public class Bank {
 
         for(int id:allAccounts.keySet()){
             Account a = allAccounts.get(id);
-            System.out.println(id+" : "+a.owner+" : "+a.balance);
+            System.out.println(id+" : "+a.getOwner()+" : "+a.getBalance());
         }
     }
 
@@ -111,7 +110,7 @@ public class Bank {
         for (int id:allAccounts.keySet()){
             Account a=allAccounts.get(id);
 
-            s=id+", "+a.owner+", "+a.balance;
+            s=id+", "+a.getOwner()+", "+a.getBalance();
             dataString.add(s);
         }
         return dataString;
@@ -120,6 +119,10 @@ public class Bank {
 
     public void save (){
         FileIO.saveData(dataString(), this.url);
+    }
+
+    public TreeMap <Integer, Account> getAllAccounts(){
+        return allAccounts;
     }
 
 }

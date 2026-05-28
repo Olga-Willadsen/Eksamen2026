@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class PhoneBook {
 
-    ArrayList<Contact> allContacts= new ArrayList<>();
+    private ArrayList<Contact> allContacts;
 
 
     PhoneBook(){
-        setUpPhoneBook();
+        this.allContacts=setUpPhoneBook();
     }
 
 
@@ -17,6 +17,7 @@ public class PhoneBook {
 
     public void newContact (){
 
+        System.out.println();
         String name=TextUI.promptString("Input first name");
         String number=TextUI.promptString("input phoneNumber");
 
@@ -48,7 +49,9 @@ public class PhoneBook {
         return null;
     }
 
-    public void setUpPhoneBook(){
+    public ArrayList<Contact> setUpPhoneBook(){
+
+        allContacts=new ArrayList<>();
 
         allContacts.add(new Contact("Mette", "22458136"));
         allContacts.add(new Contact("Jonas", "51782394"));
@@ -61,6 +64,11 @@ public class PhoneBook {
         allContacts.add(new Contact("Emma", "57319824"));
         allContacts.add(new Contact("Anders", "86432168"));
 
+        return allContacts;
+    }
+
+    public ArrayList <Contact> getAllContacts (){
+        return allContacts;
     }
 
 

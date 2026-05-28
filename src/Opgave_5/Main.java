@@ -2,8 +2,8 @@ package Opgave_5;
 
 public class Main {
 
-    static MessageApp ma = new MessageApp("Data/opgave_5_messages.csv");
-    static View v = new View();
+    private static MessageApp ma = new MessageApp("Data/opgave_5_messages.csv");
+    private static View v = new View();
 
     public static void main (String [] args) {
 
@@ -18,10 +18,9 @@ public class Main {
                 break;
             case "2":ma.saveNewMessage("skriv ny besked");
                 break;
-
-
         }
-
     }
+
+
 
 }

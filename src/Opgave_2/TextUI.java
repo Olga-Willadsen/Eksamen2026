@@ -6,14 +6,14 @@ public class TextUI {
 
     static Scanner scan;
 
-
-
-
-
     public static String promptString(String msg){
-        scan=new Scanner(System.in);
-        System.out.println(msg);
-        String input=scan.nextLine();
+        String input=null;
+        try {
+            scan = new Scanner(System.in);
+            System.out.println(msg);
+            input = scan.nextLine();
+        }catch (Exception e){
+        }
 
         return input;
     }

@@ -12,6 +12,9 @@ public class Main {
 
         pb.newContact();
 
+        System.out.println("all contacts in phonebook:");
+        System.out.println(pb.getAllContacts());
+
 
 
     }
