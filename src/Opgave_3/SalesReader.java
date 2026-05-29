@@ -1,6 +1,5 @@
 package Opgave_3;
 
-import java.io.File;
 import java.util.*;
 
 public class SalesReader {
@@ -61,7 +60,7 @@ public class SalesReader {
     public TreeMap<Integer, Integer> monthlySales(){
 
         monthlySales= new TreeMap<>();
-        ArrayList <String> data=FileIO.dataString(this.url);
+        ArrayList <String> data=FileIO.readFile(this.url);
 
         for (String s:data) {
             String [] line = s.split(",");

@@ -14,7 +14,7 @@ public class FileIO {
 
 
 
-    public static ArrayList<String> dataString(String url){
+    public static ArrayList<String> readFile(String url){
         File file = new File(url);
         ArrayList <String> data= new ArrayList<>();
         String line;

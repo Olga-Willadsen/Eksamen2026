@@ -20,7 +20,7 @@ public class Account {
 
 
     public void withdraw (double amount){
-        if (balance > amount){
+        if (balance >= amount){
         balance-=amount;}
         else{
             System.out.println("Not enough money in account to withdraw. Your current balance: "+balance);
