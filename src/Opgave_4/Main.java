@@ -31,13 +31,13 @@ public class Main {
         }
     }
 
-    public static Notifier getRandom (LinkedList <Notifier> list){
-     Random r = new Random();
-
-     int random = r.nextInt(list.size()-1);
-
-        return list.get(random);
-    }
+//    public static Notifier getRandom (LinkedList <Notifier> list){
+//     Random r = new Random();
+//
+//     int random = r.nextInt(list.size());
+//
+//        return list.get(random);
+//    }
 
 
 

@@ -12,15 +12,22 @@ public class Main {
     }
 
 
-        public static void optionsLoop(){
-        switch(v.menu()){
-            case "1":ma.printAllmessages();
-                break;
-            case "2":ma.saveNewMessage("skriv ny besked");
-                break;
-        }
-    }
+        public static void optionsLoop() {
+            String input="";
+            while (!input.equals("x")) {
+                input = v.menu();
 
+                switch (input) {
+                    case "1":
+                        ma.printAllmessages();
+                        break;
+                    case "2":
+                        ma.saveNewMessage("skriv ny besked");
+                        break;
+                }
+            }
+            System.out.println("exiting");
+        }
 
 
 }

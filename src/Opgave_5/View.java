@@ -9,6 +9,8 @@ public class View {
                 Choose from menu:
                 1. print all messages
                 2. write and save new message
+                
+                To exit press X
                 """);
 
         return response;
