@@ -27,7 +27,7 @@ public class SalesReader {
 
     public int bestMonth () {
         for (int month : monthlySales.keySet()) {
-            if (monthlySales.get(month) == maxSales()) {
+            if (monthlySales.get(month).equals(maxSales())) {
                 return month;
             }
         } return 0;
@@ -50,7 +50,7 @@ public class SalesReader {
             for (int sales : monthlySales.values()) {
                 averageSales += sales;
             }
-           averageSales=averageSales/(monthlySales().size());
+           averageSales=averageSales/(monthlySales.size());
         return averageSales;
     }
 
