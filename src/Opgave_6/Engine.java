@@ -4,18 +4,24 @@ public class Engine {
 
     private boolean running;
 
-    Engine(boolean running){
-        this.running=running;
+    Engine(){
+        running=false;
 
     }
 
     public void start(){
-        this.running=true;
+        if(running){
+            throw new IllegalStateException("Engine already running");
+        }
+        running=true;
 
     }
 
     public void stop(){
-        this.running=false;
+        if(!running){
+            throw new IllegalStateException("engine already stopped");
+        }
+        running=false;
     }
 
 

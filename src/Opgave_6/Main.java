@@ -5,7 +5,7 @@ public class Main {
 
     public static void main (String [] args){
 
-        Car volvo = new Car("Volvo", new Engine(false));
+        Car volvo = new Car("Volvo", new Engine());
 
         volvo.start();
         volvo.stop();

@@ -2,7 +2,6 @@ package Opgave_5;
 
 import java.util.ArrayList;
 
-import static Opgave_5.TextUI.promptText;
 
 public class MessageApp {
 
@@ -25,7 +24,7 @@ public class MessageApp {
 
 
     public void saveNewMessage (String message){
-        String newMessage=promptText(message);
+        String newMessage=TextUI.promptText(message);
         messages.add(newMessage);
         FileIO.save(url, messages);
     }

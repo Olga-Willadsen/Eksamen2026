@@ -13,24 +13,18 @@ public class Car {
 
     public void start(){
 
-        System.out.println("Before key is turned "+this.model+" is running?:"+engine.isRunning());
-
-        if(!engine.isRunning()){
+        System.out.println("Before key is turned "+model+" is running?:"+engine.isRunning());
         engine.start();
-            System.out.println(this.model + " is now running");
-        } else { System.out.println("Engine is already running");
+        System.out.println(model + " is now running");
         }
         //System.out.println("after key is turned "+this.model+" "+engine.isRunning());
 
-    }
 
     public void stop(){
-        System.out.println("Before key is turned "+this.model+" is running?:"+engine.isRunning());
-        if(engine.isRunning()){
+        System.out.println("Before key is turned "+model+" is running?:"+engine.isRunning());
         engine.stop();
-            System.out.println(this.model + " is stopped");
-        } else { System.out.println("engine is already turned off");
-        }
+        System.out.println(this.model + " is stopped");
+
         //System.out.println("after key is turned "+this.model+" "+engine.isRunning());
 
     }
