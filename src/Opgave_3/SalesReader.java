@@ -10,7 +10,7 @@ public class SalesReader {
 
     SalesReader(String url){
         this.url=url;
-        this.monthlySales=monthlySales();
+        this.monthlySales= createMonthlySales();
     }
 
 
@@ -57,7 +57,7 @@ public class SalesReader {
 
 
 
-    public TreeMap<Integer, Integer> monthlySales(){
+    public TreeMap<Integer, Integer> createMonthlySales(){
 
         monthlySales= new TreeMap<>();
         ArrayList <String> data=FileIO.readFile(this.url);
